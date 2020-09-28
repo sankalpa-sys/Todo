@@ -1,0 +1,68 @@
+
+  <div class="jumbotron p-4 p-md-5 text-white rounded bg-dark my-1" >
+      <div class="col-md-6 px-0">
+        <h1 class="display-4 font-italic">This is a simple TODO website</h1>
+        <p class="lead my-3">Keep track of your daily routines. Login to continue.</p>
+        <div class="container"align="right">
+          <% if user_signed_in? %>
+            <%= link_to('Logout', destroy_user_session_path, method: :delete, data: {confirm: "Are you sure want to logout?"}, :class => 'btn btn-danger') %>
+            <%= link_to('Todo',todos_path, :class =>'btn btn-warning') %>
+            <%= link_to 'Edit user',edit_user_registration_path, :class => 'btn btn-primary' %>
+          <% else %>
+            <a class="btn btn-primary" href="/users/sign_in" role="button">Login</a>
+            <a class="btn btn-success" href="/users/sign_up" role="button">Signup</a>
+          <% end %>
+
+        </div>
+
+      </div>
+    </div>
+
+<div class="card-deck">
+  <div class="card">
+    <img src="https://source.unsplash.com/250x200/?programmers,macbook" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Guarenteed completion</h5>
+      <p class="card-text">Just list all the works you need to do and check after the completion of each work to accomplish all works.</p>
+
+    </div>
+  </div>
+  <div class="card">
+    <img src="https://source.unsplash.com/250x200/?programmer,todo" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Updatable and Deletable</h5>
+      <p class="card-text">You can update your work and delete your completed work.</p>
+
+    </div>
+  </div>
+  <div class="card">
+    <img src="https://source.unsplash.com/250x200/?code,routine" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Save Time</h5>
+      <p class="card-text">Save time and and finish all your work in time.</p>
+    </div>
+  </div>
+</div>
+
+  <div class="container my-4">
+    <div class="row">
+      <div class="col-lg-4">
+        <img class="bd-placeholder-img rounded-circle" src="https://source.unsplash.com/250x250/?todoapp,coding" alt="">
+        <h2>Safe</h2>
+        <p>You will have your own account. Just signup and your account will be safe. Nobody can add to, update and delete your works.</p>
+        <p></p>
+      </div><!-- /.col-lg-4 -->
+      <div class="col-lg-4">
+        <img class="bd-placeholder-img rounded-circle" src="https://source.unsplash.com/250x250/?program,programmer" alt="">
+        <h2>Reports</h2>
+        <p>If you have any problems regarding this web app. Please send us message through the contact page. </p>
+        <p><a class="btn btn-success" href="contacts/new" role="button">Contact »</a></p>
+      </div><!-- /.col-lg-4 -->
+      <div class="col-lg-4">
+        <img class="bd-placeholder-img rounded-circle" src="https://source.unsplash.com/250x250/?technology,laptops" alt="">
+        <h2>Completion</h2>
+        <p>It helps you to complete all your work in desired time.</p>
+      </div><!-- /.col-lg-4 -->
+    </div>
+
+  </div>

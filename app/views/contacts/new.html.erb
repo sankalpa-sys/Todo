@@ -1,0 +1,27 @@
+
+<center><br><br><br>
+
+  <h3>Send a message</h3><br>
+  <%=form_with model: @contact do |form| %>
+    <%= form.text_field :full_name, placeholder: "Full Name" %><br><br>
+    <%= form.email_field :email, placeholder: "Email" %><br><br>
+    <%= form.text_field :phone, placeholder: "Phone Number" %><br><br>
+    <%= form.text_area :message, placeholder: "Message", rows: 10 %><br><br><br>
+
+    <%= form.submit "Send" ,:class => "btn btn-danger"%>
+  <% end %>
+</center>
+
+<div id="carouselExampleSlidesOnly" class="carousel slide my-4" data-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+        <img src="https://source.unsplash.com/1400x500/?phone,telephone" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="https://source.unsplash.com/1400x500/?mail,communication" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="https://source.unsplash.com/1400x500/?mobile,internet" class="d-block w-100" alt="...">
+    </div>
+  </div>
+</div>

@@ -1,0 +1,15 @@
+
+<div class="container my-4">
+  <center>
+    <table>
+      <% @todos.each do |todo| %>
+        <tr>
+          <td><h4><%= link_to todo.title, todo_path(todo) %></h4></td>
+          <td><%= button_to 'Edit', edit_todo_path(todo), method: 'get', :class => "btn btn-primary"%></td>
+          <td><%= button_to 'Remove', todo_path(todo),:class => "btn btn-danger", method: 'delete', data: { confirm: 'Are you sure want to delete?' } %></td>
+      <% end %>
+    </table>
+    <a class="btn btn-success my-4" href="todos/new" role="button">Create new Todo</a>
+  </center>
+
+</div>
